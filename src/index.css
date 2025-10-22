@@ -96,7 +96,7 @@ All colors MUST be HSL.
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 0 85% 55%;
+    --accent: 0 85% 40%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
@@ -108,7 +108,11 @@ All colors MUST be HSL.
 
     --radius: 0.5rem;
 
-    --hero-gradient: linear-gradient(100deg, hsl(0 100% 60%), hsl(0 100% 20%));
+    --hero-gradient: linear-gradient(
+      100deg,
+      hsl(0 100% 60%),
+      hsl(164, 100%, 60%)
+    );
     --text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
     --sidebar-background: 0 0% 98%;
