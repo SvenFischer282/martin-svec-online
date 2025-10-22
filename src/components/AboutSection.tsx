@@ -4,22 +4,22 @@ import { Card } from "@/components/ui/card";
 const stats = [
   {
     icon: Users,
-    number: "150+",
+    number: "100+",
     label: "Spokojných klientov",
   },
   {
     icon: TrendingUp,
-    number: "300%",
-    label: "Priemerný nárast ROI",
+    number: "250+",
+    label: "Dokončených projektov",
   },
   {
     icon: Target,
-    number: "500+",
-    label: "Úspešných kampaní",
+    number: "50+",
+    label: "Brandových identít",
   },
   {
     icon: Award,
-    number: "5+",
+    number: "7+",
     label: "Rokov skúseností",
   },
 ];
@@ -33,9 +33,9 @@ const AboutSection = () => {
             O mne
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Som <span className="text-foreground font-semibold">Martin Švec</span>, certifikovaný špecialista na Google reklamu 
-            s viac ako 5-ročnými skúsenosťami. Pomáham firmám na Slovensku dosiahnuť maximálny návrat z investícií 
-            do online reklamy. Každý projekt beriem osobne a vždy hľadám najefektívnejšie riešenia pre vašu firmu.
+            Som <span className="text-foreground font-semibold">Martin Švec</span>, grafický dizajnér s viac ako 7-ročnými skúsenosťami 
+            v oblasti vizuálnej komunikácie. Špecializujem sa na tvorbu moderných webových dizajnov, brandových identít a tlačových materiálov. 
+            Každý projekt beriem osobne a vždy sa snažím nájsť to najkreatívnejšie riešenie pre vašu značku.
           </p>
         </div>
 

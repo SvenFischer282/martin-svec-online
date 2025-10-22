@@ -1,37 +1,37 @@
-import { Search, ShoppingCart, BarChart3, Megaphone, LineChart, Settings } from "lucide-react";
+import { Palette, Globe, FileText, Package, Image, Smartphone } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
 const services = [
   {
-    icon: Search,
-    title: "Google Search Ads",
-    description: "Cielená reklama vo vyhľadávaní Google. Oslovte zákazníkov presne v momente, keď hľadajú vaše produkty alebo služby.",
+    icon: Palette,
+    title: "Brandová identita",
+    description: "Kompletný vizuálny štýl vašej značky. Logo, farebná paleta, typografia a brand guidelines pre konzistentnú komunikáciu.",
   },
   {
-    icon: ShoppingCart,
-    title: "Google Shopping",
-    description: "Efektívna propagácia produktov v Google Shopping. Ideálne pre e-shopy, ktoré chcú zvýšiť predaj a viditeľnosť.",
+    icon: Globe,
+    title: "Web dizajn",
+    description: "Moderné a responzívne dizajny webových stránok. UI/UX dizajn pre maximálny užívateľský zážitok a konverzie.",
   },
   {
-    icon: Megaphone,
-    title: "Display reklama",
-    description: "Vizuálna reklama na milióny webových stránok. Budujte povedomie o značke a oslovujte nových zákazníkov.",
+    icon: FileText,
+    title: "Tlačové materiály",
+    description: "Vizitky, letáky, brožúry, katalógy a bannery. Profesionálne grafické materiály pripravené na tlač.",
   },
   {
-    icon: LineChart,
-    title: "YouTube reklama",
-    description: "Video kampane na YouTube s presným cielením. Zaujmite publikum a zvýšte záujem o vašu firmu.",
+    icon: Package,
+    title: "Obalový dizajn",
+    description: "Atraktívny dizajn obalov produktov. Od konceptu po realizáciu, dizajn ktorý predáva.",
   },
   {
-    icon: BarChart3,
-    title: "Analytika a reporting",
-    description: "Detailné sledovanie výkonnosti kampaní. Vždy viete, ako fungujú vaše investície do reklamy.",
+    icon: Image,
+    title: "Social media grafika",
+    description: "Príspevky, príbehy a reklamy pre sociálne siete. Konzistentný vizuálny štýl pre všetky platformy.",
   },
   {
-    icon: Settings,
-    title: "Optimalizácia kampaní",
-    description: "Pravidelné vylepšovanie a úpravy pre maximálny výkon. Neustále zlepšujem výsledky vašich kampaní.",
+    icon: Smartphone,
+    title: "Mobilné aplikácie",
+    description: "UI/UX dizajn pre mobilné aplikácie. Intuitívne a používateľsky prívetivé rozhrania.",
   },
 ];
 
@@ -44,7 +44,7 @@ const ServicesSection = () => {
             Moje služby
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Komplexné riešenia Google reklamy šité na míru vašim potrebám
+            Kreatívne grafické služby pre váš úspešný biznis
           </p>
         </div>
 
@@ -73,7 +73,7 @@ const ServicesSection = () => {
             size="lg"
             className="text-lg px-8 py-6 h-auto rounded-full"
           >
-            Nezáväzná konzultácia
+            Cenová ponuka ZDARMA
           </Button>
         </div>
       </div>

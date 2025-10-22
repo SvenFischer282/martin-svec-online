@@ -4,25 +4,25 @@ import { Button } from "@/components/ui/button";
 
 const blogPosts = [
   {
-    title: "10 tipov pre úspešnú Google Ads kampaň",
-    excerpt: "Zistite, ako vytvoriť efektívnu kampaň, ktorá prinesie výsledky. Praktické rady pre začiatočníkov aj pokročilých.",
+    title: "10 trendov v grafickom dizajne na rok 2025",
+    excerpt: "Objavte najnovšie trendy, ktoré formujú svet vizuálnej komunikácie. Od minimalizmu po odvážne farby.",
     date: "15. marec 2025",
-    category: "Tipy a triky",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=400&fit=crop",
+    category: "Trendy",
+    image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&h=400&fit=crop",
   },
   {
-    title: "Ako znížiť náklady na Google reklamu",
-    excerpt: "Efektívne stratégie, ktoré vám pomôžu ušetriť až 40% z reklamného rozpočtu bez straty výkonnosti.",
+    title: "Ako vytvoriť silnú brandovú identitu",
+    excerpt: "Krok za krokom sprievodca tvorbou konzistentnej vizuálnej identity, ktorá rezonuje s vašou cieľovou skupinou.",
     date: "10. marec 2025",
-    category: "Optimalizácia",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop",
+    category: "Branding",
+    image: "https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=800&h=400&fit=crop",
   },
   {
-    title: "Google Shopping: Kompletný sprievodca",
-    excerpt: "Všetko, čo potrebujete vedieť o Google Shopping kampaniach pre váš e-shop. Od nastavenia po optimalizáciu.",
+    title: "Psychológia farieb v dizajne",
+    excerpt: "Ako využiť silu farieb pre efektívnu komunikáciu. Význam a vplyv jednotlivých odtieňov na vnímanie značky.",
     date: "5. marec 2025",
-    category: "E-commerce",
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=400&fit=crop",
+    category: "Dizajn",
+    image: "https://images.unsplash.com/photo-1536924940846-227afb31e2a5?w=800&h=400&fit=crop",
   },
 ];
 
@@ -35,7 +35,7 @@ const BlogSection = () => {
             Blog
           </h2>
           <p className="text-lg text-muted-foreground">
-            Užitočné články a tipy o Google reklame
+            Užitočné články a tipy o grafickom dizajne
           </p>
         </div>
 

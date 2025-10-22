@@ -11,10 +11,10 @@ const Footer = () => {
               Martin Švec
             </h3>
             <p className="text-background/80 mb-4">
-              Špecialista na Google reklamu
+              Grafický dizajnér
             </p>
             <p className="text-background/70 text-sm">
-              Certifikovaný Google a Shoptet Partner
+              Moderný dizajn pre weby, branding a tlač
             </p>
           </div>
 
@@ -49,12 +49,12 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4">Služby</h4>
             <ul className="space-y-2 text-background/80">
-              <li>Google Search Ads</li>
-              <li>Google Shopping</li>
-              <li>Display reklama</li>
-              <li>YouTube reklama</li>
-              <li>Analytika</li>
-              <li>Optimalizácia</li>
+              <li>Brandová identita</li>
+              <li>Web dizajn</li>
+              <li>Tlačové materiály</li>
+              <li>Obalový dizajn</li>
+              <li>Social media</li>
+              <li>UI/UX dizajn</li>
             </ul>
           </div>
 
