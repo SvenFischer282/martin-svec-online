@@ -1,3 +1,73 @@
+/**
+ * =================================================================================================
+ * MAIN STYLESHEET (index.css)
+ * =================================================================================================
+ *
+ * This file serves as the central hub for the application's styling, powered by Tailwind CSS.
+ * It defines the design system (colors, fonts, etc.) and sets global base styles.
+ *
+ * -------------------------------------------------------------------------------------------------
+ *
+ * 1. TAILWIND CSS DIRECTIVES:
+ *
+ *    - `@tailwind base;`: Injects Tailwind's foundational base styles, including a CSS reset
+ *      (like normalize.css) to ensure cross-browser consistency. This is where pre-designed
+ *      styles for basic HTML elements (h1, p, a, etc.) are included.
+ *
+ *    - `@tailwind components;`: Injects Tailwind's pre-built component classes. These are
+ *      more complex, multi-utility classes like `card`, `btn`, etc. It also includes
+ *      component styles from any installed plugins.
+ *
+ *    - `@tailwind utilities;`: Injects Tailwind's vast library of utility classes (e.g., `p-4`,
+ *      `flex`, `text-center`). This is the core of Tailwind's utility-first approach.
+ *      These are processed and generated based on your `tailwind.config.ts` file.
+ *
+ * -------------------------------------------------------------------------------------------------
+ *
+ * 2. DESIGN SYSTEM DEFINITION (`@layer base`):
+ *
+ *    This section uses a `@layer` block to tell Tailwind that these are base styles. We define
+ *    CSS Custom Properties (variables) that form the core of our design system. This allows for
+ *    easy theming (like light/dark mode) and ensures consistency across the entire application.
+ *
+ *    - `:root { ... }`: Defines the variables for the default (light) theme.
+ *      - All colors are defined using HSL (Hue, Saturation, Lightness) values without the `hsl()`
+ *        function wrapper. Tailwind automatically handles this, e.g., `background-color: hsl(var(--background))`.
+ *      - `--background` & `--foreground`: The primary background and text colors for the app.
+ *      - `--card` & `--card-foreground`: Colors for card-like components.
+ *      - `--popover` & `--popover-foreground`: Colors for popovers, dropdowns, etc.
+ *      - `--primary` & `--primary-foreground`: Main brand colors for buttons, links, and active states.
+ *      - `--secondary` & `--secondary-foreground`: Used for less emphasized elements.
+ *      - `--muted` & `--muted-foreground`: For subtle text or backgrounds, like placeholders.
+ *      - `--accent` & `--accent-foreground`: A contrasting color to draw attention.
+ *      - `--destructive` & `--destructive-foreground`: For actions that indicate a destructive
+ *        operation (e.g., delete, remove).
+ *      - `--border`, `--input`, `--ring`: Variables for default borders, form input fields,
+ *        and focus rings (for accessibility).
+ *      - `--radius`: The standard border-radius used for most elements, creating a consistent look.
+ *      - Custom variables like `--hero-gradient`, `--text-shadow`, and `--sidebar-*` are also
+ *        defined for specific component styling.
+ *
+ *    - `.dark { ... }`: This class, when applied to an element (usually the `<html>` tag),
+ *      overrides the `:root` variables to apply the dark theme. Each variable from the light
+ *      theme is redefined with its dark mode equivalent.
+ *
+ * -------------------------------------------------------------------------------------------------
+ *
+ * 3. GLOBAL BASE STYLES (`@layer base`):
+ *
+ *    This final section applies some foundational styles to the entire document.
+ *
+ *    - `* { @apply border-border; }`: A global rule that sets the default border color for all
+ *      elements to the value of our `--border` variable. This is a convenient shortcut.
+ *
+ *    - `body { @apply bg-background text-foreground; }`: Applies the core background and text
+ *      colors to the `<body>` tag, setting the default look for all pages. This ensures that
+ *      the app will correctly switch between light and dark themes.
+ *
+ * =================================================================================================
+ */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -17,7 +87,7 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 218 15% 25%;
 
-    --primary: 211 100% 50%;
+    --primary: 0 100% 60%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 210 40% 96.1%;
@@ -34,11 +104,11 @@ All colors MUST be HSL.
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 211 100% 50%;
+    --ring: 0 100% 60%;
 
     --radius: 0.5rem;
-    
-    --hero-gradient: linear-gradient(135deg, hsl(211 100% 75%), hsl(211 100% 50%));
+
+    --hero-gradient: linear-gradient(100deg, hsl(0 100% 60%), hsl(0 100% 20%));
     --text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
     --sidebar-background: 0 0% 98%;
@@ -68,7 +138,7 @@ All colors MUST be HSL.
     --popover: 218 25% 15%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 211 100% 50%;
+    --primary: 0 100% 60%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 217.2 32.6% 17.5%;
@@ -85,7 +155,7 @@ All colors MUST be HSL.
 
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
-    --ring: 211 100% 50%;
+    --ring: 0 100% 60%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
