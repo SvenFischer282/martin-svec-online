@@ -7,6 +7,8 @@ import {
 } from "@/components/ui/carousel";
 import { Card } from "@/components/ui/card";
 import Autoplay from "embla-carousel-autoplay";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 const projects = [
   {
@@ -54,17 +56,25 @@ const projects = [
 ];
 
 const PortfolioSection = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+
   return (
-    <section className="py-20 bg-background">
+    <section ref={ref} className="py-20 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <motion.div 
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6 }}
+        >
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
             Moje projekty
           </h2>
           <p className="text-lg text-muted-foreground">
             Pozrite si výber mojich najnovších prác
           </p>
-        </div>
+        </motion.div>
 
         <Carousel
           opts={{
@@ -81,30 +91,45 @@ const PortfolioSection = () => {
           <CarouselContent className="-ml-2 md:-ml-4">
             {projects.map((project, index) => (
               <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
-                <Card className="overflow-hidden group cursor-pointer h-full">
-                  <div className="relative h-64 overflow-hidden">
-                    <div className={`absolute inset-0 bg-gradient-to-br ${project.color} opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10`} />
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                    />
-                    <div className="absolute top-4 left-4 z-20">
-                      <span className="inline-block px-3 py-1 text-xs font-semibold rounded-full bg-background/90 text-foreground backdrop-blur-sm">
-                        {project.category}
-                      </span>
+                <motion.div
+                  initial={{ opacity: 0, y: 50 }}
+                  animate={isInView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                >
+                  <Card className="overflow-hidden group cursor-pointer h-full hover:shadow-2xl transition-shadow duration-300">
+                    <motion.div 
+                      className="relative h-64 overflow-hidden"
+                      whileHover={{ scale: 1.05 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <div className={`absolute inset-0 bg-gradient-to-br ${project.color} opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10`} />
+                      <motion.img
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-full object-cover"
+                        whileHover={{ scale: 1.15 }}
+                        transition={{ duration: 0.6 }}
+                      />
+                      <motion.div 
+                        className="absolute top-4 left-4 z-20"
+                        whileHover={{ scale: 1.1 }}
+                      >
+                        <span className="inline-block px-3 py-1 text-xs font-semibold rounded-full bg-background/90 text-foreground backdrop-blur-sm">
+                          {project.category}
+                        </span>
+                      </motion.div>
+                    </motion.div>
+                    
+                    <div className="p-6">
+                      <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
+                        {project.title}
+                      </h3>
+                      <p className="text-muted-foreground text-sm leading-relaxed">
+                        {project.description}
+                      </p>
                     </div>
-                  </div>
-                  
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
-                      {project.title}
-                    </h3>
-                    <p className="text-muted-foreground text-sm leading-relaxed">
-                      {project.description}
-                    </p>
-                  </div>
-                </Card>
+                  </Card>
+                </motion.div>
               </CarouselItem>
             ))}
           </CarouselContent>

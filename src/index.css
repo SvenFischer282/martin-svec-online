@@ -114,6 +114,14 @@ All colors MUST be HSL.
       hsl(164, 100%, 60%)
     );
     --text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    
+    --gradient-animated: linear-gradient(
+      -45deg,
+      hsl(0 100% 60%),
+      hsl(164 100% 60%),
+      hsl(220 100% 60%),
+      hsl(280 100% 60%)
+    );
 
     --sidebar-background: 0 0% 98%;
 
